@@ -3,6 +3,9 @@ from pydantic import BaseModel
 
 class Profile(BaseModel):
     email:str
+    user_name:str
+    description : str
+    birth_date : str
     name : str
     wallet_amt : int
     rating : int
