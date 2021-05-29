@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 pipreqs = "*"
+gunicorn = "*"
 
 [dev-packages]
 
