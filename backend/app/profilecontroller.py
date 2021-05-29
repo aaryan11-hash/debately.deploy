@@ -2,7 +2,7 @@ from fastapi import APIRouter
 import json
 from bson import json_util
 # from ..configs.mongoconnect import connectMongoClient
-from .models import Profile
+from .models import Profile,MeetingDto
 from .configs.mongoconnect import connectMongoClient
 
 router = APIRouter(prefix="/profiles")  
@@ -66,6 +66,17 @@ def postNewProfile(profile : Profile):
         return True
 
     return False
+
+
+@router.post("/add_meeting")
+def add_meeting(meetingDto : MeetingDto):
+    email = meetingDto.profile_email
+    meeting_id = meetingDto.meeting_id
+    collection.update({"email":email},{"$push":{"meeting_id_list":meeting_id}})
+    
+    return True
+    
+
 
 @router.delete('/{profile_email}',status_code=200)
 def deleteProfileById(profile_email : str):

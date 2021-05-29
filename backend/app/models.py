@@ -10,11 +10,15 @@ class Profile(BaseModel):
     wallet_amt : int
     rating : int
     total_debates_attended : int
+    meeting_id_list : list
     
 class Report(BaseModel):
     reportForUser1 : str
     reportForUser2 : str
 
+class MeetingDto(BaseModel):
+    profile_email : str
+    meeting_id : str
 
 class SessionDetails(BaseModel):
     session_id : int
