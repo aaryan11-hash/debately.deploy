@@ -1,5 +1,5 @@
 *Smart Debate analysis platform*
-# Execute-It Main server
+# Debately server
 
 Main server for managing all the services in the project.
 ![ezgif com-gif-maker] embed video here
