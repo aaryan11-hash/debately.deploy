@@ -11,9 +11,11 @@ The back-end is developed using fastapi and has pip dependencies.
 
 
 ## Starting the Back-end Server
- ``` pip install -r requirements.txt ```
- ``` cd ./backend ```
- ``` uvicorn backend.app.main:app ```
+ ```sh 
+ pip install -r requirements.txt
+ cd ./backend
+ uvicorn backend.app.main:app 
+ ```
  
 ## Starting the Front-end Server
 ``` cd ./client ```
