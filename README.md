@@ -18,9 +18,10 @@ The back-end is developed using fastapi and has pip dependencies.
  ```
  
 ## Starting the Front-end Server
-``` cd ./client ```
-``` npm install ```
-``` npm run start ```
+```sh 
+cd ./client
+npm install
+npm run start ```
 
 
 ## System Architecture
